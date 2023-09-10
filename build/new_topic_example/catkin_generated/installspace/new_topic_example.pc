@@ -1,0 +1,8 @@
+prefix=/home/gulislamoglu/catkin_ws/install
+
+Name: new_topic_example
+Description: Description of new_topic_example
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
