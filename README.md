@@ -22,7 +22,6 @@ Bu betik, aşağıdaki ROS paketlerine ve hizmetlere bağımlıdır:
 - rospy
 - elevator_control_example.srv.ElevatorControl
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -51,7 +50,6 @@ Bu betik, aşağıdaki ROS paketlerine ve hizmetlere bağımlıdır:
 - elevator_control_example.srv.ElevatorControl
 - elevator_control_example.srv.ElevatorControlResponse
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -135,7 +133,6 @@ Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - tf
 - turtlesim.msg.Pose
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -167,8 +164,6 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
 - geometry_msgs.msg.Twist
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
-
 ### Kullanım
 
 1. Betiği çalıştırın:
@@ -194,7 +189,6 @@ Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - rospy
 - geometry_msgs.msg.Twist
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -224,8 +218,6 @@ Bu Python betiği, ROS (Robot Operating System) kullanarak bir Turtlebot'un pozi
 Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - rospy
 - turtlesim.msg.Pose
-
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -260,7 +252,6 @@ Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - geometry_msgs.msg.Twist
 - turtlesim.srv.SetPen
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -290,7 +281,7 @@ Bu Python betiği, ROS (Robot Operating System) kullanarak bir hizmeti çağıra
 Bu betik, aşağıdaki ROS paketlerine ve hizmet mesajlarına bağımlıdır:
 rospy
 my_string_concat_service.srv.ConcatenateStrings
-Bu paketlerin ve hizmet mesajlarının kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
+
 
 ### Kullanım
 Betiği çalıştırın:
@@ -318,7 +309,7 @@ Bu betik, aşağıdaki ROS paketlerine ve hizmet mesajlarına bağımlıdır:
 rospy
 my_string_concat_service.srv.ConcatenateStrings
 my_string_concat_service.srv.ConcatenateStringsResponse
-Bu paketlerin ve hizmet mesajlarının kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
+
 
 ### Kullanım
 Betiği çalıştırın:
@@ -344,7 +335,6 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
 - nav_msgs.msg
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -370,7 +360,6 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
 - tf
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -405,7 +394,6 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
 - geometry_msgs
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -422,7 +410,7 @@ Betiği özelleştirmek için aşağıdaki parametreleri kullanabilirsiniz:
 
 move_turtle fonksiyonu içinde Turtlebot adını, lineer hızı ve açısal hızı belirleyebilirsiniz.
 
-## 12. [Draw square, circle, triangle](turtlesim_example/)
+## 12. [Draw square, circle, triangle](src/turtlesim_example)
 
 # Turtle Shape Drawer
 
@@ -436,7 +424,6 @@ Bu betik, aşağıdaki ROS paketlerine ve Python modüllerine bağımlıdır:
 - turtlesim.msg
 - math modülü
 
-Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
 ### Kullanım
 
@@ -463,6 +450,71 @@ draw_triangle: Üçgen çizer.
 Çizimler, /turtle1/cmd_vel konusuna hareket komutları göndererek gerçekleştirilir.
 Çizimlerin düzgün çalışabilmesi için Turtlebot'un turtlesim simülasyonu etkin olmalıdır.
 
+## 13. [Map Navigation with move_base](src/topic03_map_navigation/src)
+
+# Map Navigation with move_base
+
+Bu Python betiği, ROS (Robot Operating System) ortamında bir mobil robotun belirli bir hedefe gitmesini sağlar. "move_base" adlı ROS paketi ve hareket tabanlı bir eylem (action) sunucusu kullanılarak, robotun bir hedef konuma gitmesi hedeflenir.
+
+### Bağımlılıklar
+
+Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
+
+rospy
+actionlib
+move_base_msgs.msg.MoveBaseAction
+actionlib_msgs.msg.GoalStatus
+geometry_msgs.msg.Point
+
+
+### Kullanım
+
+1. Betiği çalıştırın:
+   ```bash
+      ./map_navigation.py
+Betik, "move_base" adlı hareket tabanlı eylem sunucusunu kullanarak hedefe gitmek için hareket eder.
+Hedef konumu (xGoal ve yGoal) belirtilmelidir. Bu örnekte, hedef konum "-2.02880191803, 4.02200937271" olarak belirtilmiştir. Kendi hedef konumunuzu belirlemek için betiği düzenleyebilirsiniz.
+Robot, hedef konuma gitmek için gerekli hesaplamaları yapar ve "move_base" eylem sunucusuna gönderir.
+Robot, hedefe ulaştığında başarılı bir şekilde tamamlanmış bir işlem döndürecektir.
+
+### Notlar
+Bu betik, ROS ortamında harita tabanlı navigasyon için kullanılabilir.
+Hedef konumu ve diğer parametreleri betikte düzenleyebilirsiniz.
+Robotun hareketini izlemek ve hedefe ulaşıp ulaşmadığını kontrol etmek için ROS komutları kullanabilirsiniz.
+
+## 14. [Turtlesim Odometri Bilgisi Okuma](src/topic01_quaternion/src)
+
+# Turtlesim Odometri Bilgisi Okuma
+
+Bu Python betiği, ROS (Robot Operating System) ortamında bir Turtlebot robotunun odometri bilgilerini okumak için kullanılır. Odometri bilgileri, robotun konumunu ve hızını içerir.
+
+### Bağımlılıklar
+
+Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
+
+rospy
+geometry_msgs.msg.Twist
+nav_msgs.msg.Odometry
+math
+time
+std_srvs.srv.Empty
+tf
+
+
+### Kullanım
+
+1.Betiği çalıştırın:
+    ```bash
+      ./turtlesim_odometry_reader.py
+Betik, "/odom" adlı konudan odometri verilerini dinlemeye başlar.
+
+Odometri verileri her geldiğinde, odomPoseCallback fonksiyonu çağrılır ve bu veriler ekrana basılır.
+
+Konum (x, y), hız (vx, vz) ve oryantasyon (qx, qy, qz, qw) bilgileri yazdırılır. Ayrıca bu bilgilerden hesaplanan roll, pitch ve yaw açıları da yazdırılır.
+
+### Notlar
+Bu betik, Turtlebot veya benzeri bir mobil robotun odometri bilgilerini izlemek için kullanılabilir.
+Odometri verilerini işlemek veya başka işlemlerle entegre etmek için bu betiği kullanabilirsiniz.
 
 ## İletişim
 
