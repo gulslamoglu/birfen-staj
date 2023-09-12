@@ -69,6 +69,59 @@ Hizmet çağrılarına yanıt olarak bir başarı durumu ve ileti döndürür.
 ### Notlar
 Bu betik, /elevator_control adlı bir ROS hizmetini kullanarak asansörün yüksekliğini kontrol eder ve uygun yanıtları gönderir.
 
+### Action
+Asansör örneğini bir Action hizmeti olarak yeniden yazmak için Python'da **`actionlib`** kütüphanesini kullanabiliriz. 
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import rospy
+import actionlib
+from elevator_control_example.msg import ElevatorControlAction, ElevatorControlResult, ElevatorControlFeedback
+
+class ElevatorControlServer(object):
+    def __init__(self):
+        self.server = actionlib.SimpleActionServer('elevator_control', ElevatorControlAction, self.execute, False)
+        self.server.start()
+
+    def execute(self, goal):
+        # Hedef yükseklik alınır
+        target_floor = goal.floor
+
+        # Asansörü hedef yüksekliğe taşıma simülasyonu yapılır (örneğin, zaman geçişi)
+        success = self.move_elevator(target_floor)
+
+        if success:
+            self.server.set_succeeded(ElevatorControlResult(success=True, message="Asansör başarıyla kaldırıldı - indirildi."))
+        else:
+            self.server.set_aborted(ElevatorControlResult(success=False, message="Asansör hedef yüksekliği kaldıramadı."))
+
+    def move_elevator(self, target_floor):
+        # Bu işlev asansörün hedef yüksekliğe taşınmasını simüle eder.
+        # Simülasyon başarılıysa True, başarısızsa False döndürür.
+        # Gerçek asansör kontrol kodu buraya gelebilir.
+        # Simülasyon olarak her zaman başarılı kabul ediyoruz.
+        return True
+
+if __name__ == "__main__":
+    rospy.init_node('elevator_control_server')
+    elevator_server = ElevatorControlServer()
+    rospy.spin()
+
+```
+
+Bu örnekte, asansör kontrolünü bir Action hizmetine dönüştürdük. **`ElevatorControlAction`**, **`ElevatorControlResult`**, ve **`ElevatorControlFeedback`** mesajlarını içeren **`elevator_control_example.msg`** dosyasını kullanıyoruz. **`ElevatorControlServer`** sınıfı, Action sunucusunu başlatır ve gelen hedef yüksekliği alır. Ardından, **`move_elevator`** işlevi, asansörün hedef yüksekliğe taşınmasını simüle eder (gerçek kontrol kodu burada olacaktır). Sonuç olarak, işlem başarılıysa veya başarısızsa uygun sonuçları ayarlar.
+
+Action hizmetleri, istemci tarafından bir hedef gönderilir ve sonuçlar alınana kadar asenkron bir şekilde çalışır. Bu, istemcinin asansörün işlemini tamamlanmasını beklemesine ve istemciye ilerleme hakkında geri bildirim sağlama yeteneği sağlar.
+
+## Action Vs Service:
+
+1. **Service (Hizmet)**: Servisler, istemciden bir talep alır, bu talebi işler ve sonuçları anında yanıtlar. Servisler senkron bir yapıya sahiptir, yani istemci talep gönderdiğinde işlem tamamlanana kadar bekler ve sonucu alır. Servisler, istemci ile sunucu arasında iletişimde kullanılır ve tipik olarak anlık yanıtlar gerektiren işlemler için kullanılır.
+2. **Action (Eylem)**: Eylemler, uzun süreli görevlerin yönetimi ve gerçek zamanlı geri bildirim sağlama amacıyla kullanılır. İstemci bir hedef gönderir, sunucu bu hedefi işlerken geri bildirim sağlar ve sonuçları gönderir. Action, işlem süresi uzun olan görevler için kullanışlıdır ve istemcinin işlemi beklemesi gerekmeksizin diğer işlemleri yürütmesine olanak tanır.
+
+Action, gerçek zamanlı denetim ve geri bildirim gerektiren karmaşık işlemlerde kullanılırken, servisler daha basit, anlık istek-yanıt gerektiren görevler için uygundur.
+
 ## 2. [Turtle TF Broadcaster](src/learning_tf/nodes)
 
 # Turtle TF Broadcaster
