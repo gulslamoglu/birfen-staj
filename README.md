@@ -10,7 +10,7 @@ Adının aksine bir işletim sistemi değildir. Çok yararlı yazılımlar, sim�
 
 ## Projeler
 
-### 1. [Elevator Control Service Example](elevator_control_example.md)
+### 1. [Elevator Control Service Example](src/elevator_control_example/scripts)
 
 ## Asansör Kontrol İstemcisi
 
@@ -69,7 +69,7 @@ Hizmet çağrılarına yanıt olarak bir başarı durumu ve ileti döndürür.
 Notlar
 Bu betik, /elevator_control adlı bir ROS hizmetini kullanarak asansörün yüksekliğini kontrol eder ve uygun yanıtları gönderir.
 
-### 2. [Turtle TF Broadcaster](learning_tf/)
+### 2. [Turtle TF Broadcaster](src/learning_tf/nodes)
 
 # Turtle TF Broadcaster
 
@@ -101,7 +101,7 @@ Notlar
 Betik, /turtle1/pose konusundan gelen pozisyon verilerini dinler ve bu verileri TF dönüşüm bilgilerine çevirir.
 TF dönüşümü, Turtlebot'un (x, y) pozisyonunu ve yönelimini ("world" çerçevesi içinde) ifade eder.
 
-### 3. [Draw circle](my_ros_examples/)
+### 3. [Draw circle](src/my_ros_examples/scripts)
 
 # Turtlebot ile Daire Çizme
 
@@ -128,7 +128,7 @@ Notlar
 Bu betik, Turtlebot'a dönmeyi ve ileri yönde hareket etmeyi sağlamak için Twist mesajları kullanır.
 Dairenin çizim hızını ayarlamak için rate değişkenini düzenleyebilirsiniz.
 
-### 4. [Cmd vel Publisher](my_ros_examples/)
+### 4. [Cmd vel Publisher](src/my_ros_examples/scripts)
 
 # cmd_vel Yayıncısı
 
@@ -159,7 +159,7 @@ cmd.angular.z: Robotun dönme hızını ayarlar. Örneğin, cmd.angular.z = 0.0 
 Notlar
 Bu betik, /cmd_vel konusuna Twist mesajları göndererek robotun hareketini kontrol eder.
 
-### 5. [Turtlebot Pose Publisher](my_ros_examples/)
+### 5. [Turtlebot Pose Publisher](src/my_ros_examples/scripts)
 
 # Turtlebot Pozisyon Abonesi
 
@@ -188,11 +188,11 @@ Betik içinde yorum satırı olarak verilen kod parçası, pose_callback fonksiy
 Notlar
 Bu betik, /turtle1/pose konusundan gelen Pose mesajlarını dinleyerek Turtlebot'un anlık pozisyon verilerini görüntüler.
 
-### 6. [My first Publisher](my_ros_examples/)
+### 6. [My first Publisher](src/my_ros_examples/scripts)
 
 Proje açıklaması: Proje 6 ile ilgili kısa bir açıklama burada bulunur.
 
-### 7. [Turtle Controller](my_ros_examples/)
+### 7. [Turtle Controller](src/my_ros_examples/scripts)
 
 # Turtlebot Hareket ve Çizim Kontrolü
 
