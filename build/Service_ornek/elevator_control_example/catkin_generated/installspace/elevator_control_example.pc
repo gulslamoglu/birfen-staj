@@ -1,0 +1,8 @@
+prefix=/home/gulislamoglu/catkin_ws/install
+
+Name: elevator_control_example
+Description: Description of elevator_control_example
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

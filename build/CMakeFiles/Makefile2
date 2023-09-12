@@ -55,10 +55,12 @@ CMAKE_BINARY_DIR = /home/gulislamoglu/catkin_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: turtlebot3_simulations/turtlebot3_simulations/all
-all: elevator_control_example/all
-all: my_string_concat_service/all
+all: Service_ornek/elevator_control_example/all
+all: Service_ornek/my_string_concat_service/all
 all: my_turtlebot3_pkg/all
+all: topic03_map_navigation/all
 all: new_topic_example/all
+all: topic01_quaternion/all
 all: turtlebot3_simulations/turtlebot3_fake/all
 all: turtlebot3_simulations/turtlebot3_gazebo/all
 all: learning_tf/all
@@ -70,10 +72,12 @@ all: turtlesim_example/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: turtlebot3_simulations/turtlebot3_simulations/preinstall
-preinstall: elevator_control_example/preinstall
-preinstall: my_string_concat_service/preinstall
+preinstall: Service_ornek/elevator_control_example/preinstall
+preinstall: Service_ornek/my_string_concat_service/preinstall
 preinstall: my_turtlebot3_pkg/preinstall
+preinstall: topic03_map_navigation/preinstall
 preinstall: new_topic_example/preinstall
+preinstall: topic01_quaternion/preinstall
 preinstall: turtlebot3_simulations/turtlebot3_fake/preinstall
 preinstall: turtlebot3_simulations/turtlebot3_gazebo/preinstall
 preinstall: learning_tf/preinstall
@@ -90,10 +94,12 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: turtlebot3_simulations/turtlebot3_simulations/clean
-clean: elevator_control_example/clean
-clean: my_string_concat_service/clean
+clean: Service_ornek/elevator_control_example/clean
+clean: Service_ornek/my_string_concat_service/clean
 clean: my_turtlebot3_pkg/clean
+clean: topic03_map_navigation/clean
 clean: new_topic_example/clean
+clean: topic01_quaternion/clean
 clean: turtlebot3_simulations/turtlebot3_fake/clean
 clean: turtlebot3_simulations/turtlebot3_gazebo/clean
 clean: learning_tf/clean
@@ -103,22 +109,44 @@ clean: turtlesim_example/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory elevator_control_example
+# Directory level rules for directory Service_ornek/elevator_control_example
 
 # Recursive "all" directory target.
-elevator_control_example/all:
+Service_ornek/elevator_control_example/all:
 
-.PHONY : elevator_control_example/all
+.PHONY : Service_ornek/elevator_control_example/all
 
 # Recursive "preinstall" directory target.
-elevator_control_example/preinstall:
+Service_ornek/elevator_control_example/preinstall:
 
-.PHONY : elevator_control_example/preinstall
+.PHONY : Service_ornek/elevator_control_example/preinstall
 
 # Recursive "clean" directory target.
-elevator_control_example/clean:
+Service_ornek/elevator_control_example/clean:
 
-.PHONY : elevator_control_example/clean
+.PHONY : Service_ornek/elevator_control_example/clean
+
+#=============================================================================
+# Directory level rules for directory Service_ornek/my_string_concat_service
+
+# Recursive "all" directory target.
+Service_ornek/my_string_concat_service/all:
+
+.PHONY : Service_ornek/my_string_concat_service/all
+
+# Recursive "preinstall" directory target.
+Service_ornek/my_string_concat_service/preinstall:
+
+.PHONY : Service_ornek/my_string_concat_service/preinstall
+
+# Recursive "clean" directory target.
+Service_ornek/my_string_concat_service/clean: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+Service_ornek/my_string_concat_service/clean: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+Service_ornek/my_string_concat_service/clean: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+Service_ornek/my_string_concat_service/clean: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+Service_ornek/my_string_concat_service/clean: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+
+.PHONY : Service_ornek/my_string_concat_service/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -218,28 +246,6 @@ my_ros_examples/clean:
 .PHONY : my_ros_examples/clean
 
 #=============================================================================
-# Directory level rules for directory my_string_concat_service
-
-# Recursive "all" directory target.
-my_string_concat_service/all:
-
-.PHONY : my_string_concat_service/all
-
-# Recursive "preinstall" directory target.
-my_string_concat_service/preinstall:
-
-.PHONY : my_string_concat_service/preinstall
-
-# Recursive "clean" directory target.
-my_string_concat_service/clean: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean
-my_string_concat_service/clean: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
-my_string_concat_service/clean: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
-my_string_concat_service/clean: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
-my_string_concat_service/clean: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
-
-.PHONY : my_string_concat_service/clean
-
-#=============================================================================
 # Directory level rules for directory my_turtlebot3_pkg
 
 # Recursive "all" directory target.
@@ -317,6 +323,42 @@ new_topic_example/clean: new_topic_example/CMakeFiles/tf2_msgs_generate_messages
 new_topic_example/clean: new_topic_example/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
 
 .PHONY : new_topic_example/clean
+
+#=============================================================================
+# Directory level rules for directory topic01_quaternion
+
+# Recursive "all" directory target.
+topic01_quaternion/all:
+
+.PHONY : topic01_quaternion/all
+
+# Recursive "preinstall" directory target.
+topic01_quaternion/preinstall:
+
+.PHONY : topic01_quaternion/preinstall
+
+# Recursive "clean" directory target.
+topic01_quaternion/clean:
+
+.PHONY : topic01_quaternion/clean
+
+#=============================================================================
+# Directory level rules for directory topic03_map_navigation
+
+# Recursive "all" directory target.
+topic03_map_navigation/all:
+
+.PHONY : topic03_map_navigation/all
+
+# Recursive "preinstall" directory target.
+topic03_map_navigation/preinstall:
+
+.PHONY : topic03_map_navigation/preinstall
+
+# Recursive "clean" directory target.
+topic03_map_navigation/clean:
+
+.PHONY : topic03_map_navigation/clean
 
 #=============================================================================
 # Directory level rules for directory turtlebot3_simulations/turtlebot3_fake
@@ -689,139 +731,139 @@ turtlebot3_simulations/turtlebot3_simulations/CMakeFiles/_catkin_empty_exported_
 .PHONY : turtlebot3_simulations/turtlebot3_simulations/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
-# Target rules for target my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir
+# Target rules for target Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir
 
 # All Build rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/depend
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/depend
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gulislamoglu/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_py"
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/rule: cmake_check_build_system
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_py: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+std_srvs_generate_messages_py: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 .PHONY : std_srvs_generate_messages_py
 
 # clean rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir
+# Target rules for target Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gulislamoglu/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_nodejs"
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_nodejs: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+std_srvs_generate_messages_nodejs: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 .PHONY : std_srvs_generate_messages_nodejs
 
 # clean rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir
+# Target rules for target Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir
 
 # All Build rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gulislamoglu/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_lisp"
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_lisp: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+std_srvs_generate_messages_lisp: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 .PHONY : std_srvs_generate_messages_lisp
 
 # clean rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir
+# Target rules for target Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir
 
 # All Build rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gulislamoglu/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_eus"
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_eus: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+std_srvs_generate_messages_eus: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 .PHONY : std_srvs_generate_messages_eus
 
 # clean rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir
+# Target rules for target Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir
 
 # All Build rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gulislamoglu/catkin_ws/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_cpp"
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule: cmake_check_build_system
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gulislamoglu/catkin_ws/build/CMakeFiles 0
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_cpp: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+std_srvs_generate_messages_cpp: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
 .PHONY : std_srvs_generate_messages_cpp
 
 # clean rule for target.
-my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
-.PHONY : my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+.PHONY : Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target my_turtlebot3_pkg/CMakeFiles/std_msgs_generate_messages_py.dir
@@ -2555,11 +2597,11 @@ turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/dynamic_reconfigure_generate
 # Target rules for target turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir
 
 # All Build rule for target.
-turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all
-turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
-turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
-turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all
-turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_py.dir/all
+turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: Service_ornek/my_string_concat_service/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
 turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_turtlebot3_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
 turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_turtlebot3_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 turtlebot3_simulations/turtlebot3_gazebo/CMakeFiles/turtlebot3_drive.dir/all: my_turtlebot3_pkg/CMakeFiles/roscpp_generate_messages_cpp.dir/all

@@ -1,0 +1,8 @@
+prefix=/home/gulislamoglu/catkin_ws/install
+
+Name: topic01_quaternion
+Description: Description of topic01_quaternion
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
