@@ -61,6 +61,7 @@ all: my_turtlebot3_pkg/all
 all: topic03_map_navigation/all
 all: new_topic_example/all
 all: topic01_quaternion/all
+all: turtlebot3_example/all
 all: turtlebot3_simulations/turtlebot3_fake/all
 all: turtlebot3_simulations/turtlebot3_gazebo/all
 all: learning_tf/all
@@ -78,6 +79,7 @@ preinstall: my_turtlebot3_pkg/preinstall
 preinstall: topic03_map_navigation/preinstall
 preinstall: new_topic_example/preinstall
 preinstall: topic01_quaternion/preinstall
+preinstall: turtlebot3_example/preinstall
 preinstall: turtlebot3_simulations/turtlebot3_fake/preinstall
 preinstall: turtlebot3_simulations/turtlebot3_gazebo/preinstall
 preinstall: learning_tf/preinstall
@@ -100,6 +102,7 @@ clean: my_turtlebot3_pkg/clean
 clean: topic03_map_navigation/clean
 clean: new_topic_example/clean
 clean: topic01_quaternion/clean
+clean: turtlebot3_example/clean
 clean: turtlebot3_simulations/turtlebot3_fake/clean
 clean: turtlebot3_simulations/turtlebot3_gazebo/clean
 clean: learning_tf/clean
@@ -359,6 +362,24 @@ topic03_map_navigation/preinstall:
 topic03_map_navigation/clean:
 
 .PHONY : topic03_map_navigation/clean
+
+#=============================================================================
+# Directory level rules for directory turtlebot3_example
+
+# Recursive "all" directory target.
+turtlebot3_example/all:
+
+.PHONY : turtlebot3_example/all
+
+# Recursive "preinstall" directory target.
+turtlebot3_example/preinstall:
+
+.PHONY : turtlebot3_example/preinstall
+
+# Recursive "clean" directory target.
+turtlebot3_example/clean:
+
+.PHONY : turtlebot3_example/clean
 
 #=============================================================================
 # Directory level rules for directory turtlebot3_simulations/turtlebot3_fake
