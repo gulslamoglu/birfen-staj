@@ -1,6 +1,6 @@
 # ROS Projelerim
 
-Bu repo, Robot Operating System (ROS) üzerinde geliştirdiğim 15 farklı projeyi içermektedir. Aşağıda bu projelerin her biri hakkında kısa bir açıklama bulabilirsiniz. Her bir projenin ayrıntılı açıklamaları ve kaynak kodları ilgili klasörlerde bulunmaktadır.
+Bu repo, Robot Operating System (ROS) üzerinde geliştirdiğim 15 farklı projeyi içermektedir. Aşağıda bu projelerin her biri hakkında kısa bir açıklama bulabilirsiniz. Her bir projenin ayrıntılı açıklamaları ve kaynak kodları ilgili klasörlerde bulunmaktadır. Ayrıca staj süresince çalışmalarımla alakalı aldığım notları içeren linke en aşağıdaki iletişim kısmında erişebilirsiniz.
 
 ## ROS Hakkında
 
@@ -10,13 +10,13 @@ Adının aksine bir işletim sistemi değildir. Çok yararlı yazılımlar, sim�
 
 ## Projeler
 
-### 1. [Elevator Control Service Example](src/elevator_control_example/scripts)
+## 1. [Elevator Control Service Example](src/elevator_control_example/scripts)
 
 ## Asansör Kontrol İstemcisi
 
 Bu Python betiği, bir asansör kontrol hizmetini çağırmak için kullanılır. İstemci, asansörü belirli bir yüksekliğe kaldırmak veya indirmek için kullanılabilir.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine ve hizmetlere bağımlıdır:
 - rospy
@@ -24,7 +24,7 @@ Bu betik, aşağıdaki ROS paketlerine ve hizmetlere bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -37,14 +37,14 @@ Hizmet çağrısı sonucunu ve iletiyi ekrana basar.
 
 Geçersiz bir yükseklik değeri girilirse, bir hata mesajı görüntülenir.
 
-## Notlar
+### Notlar
 Bu betik, elevator_control adlı bir ROS hizmetini çağırarak asansörü belirli bir yüksekliğe kaldırmak veya indirmek için kullanılır.
 
 ## Asansör Kontrol Sunucusu
 
 Bu Python betiği, asansör kontrol hizmetini sunmak için kullanılır. Sunucu, asansörün belirli bir yüksekliğe kaldırılmasının veya indirilmesinin taleplerini kabul eder ve bu taleplere yanıt verir.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine ve hizmetlere bağımlıdır:
 - rospy
@@ -53,7 +53,7 @@ Bu betik, aşağıdaki ROS paketlerine ve hizmetlere bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -66,16 +66,16 @@ Asansörün 5'ten daha büyük bir yüksekliği kaldıramayacağını belirler v
 
 Hizmet çağrılarına yanıt olarak bir başarı durumu ve ileti döndürür.
 
-Notlar
+### Notlar
 Bu betik, /elevator_control adlı bir ROS hizmetini kullanarak asansörün yüksekliğini kontrol eder ve uygun yanıtları gönderir.
 
-### 2. [Turtle TF Broadcaster](src/learning_tf/nodes)
+## 2. [Turtle TF Broadcaster](src/learning_tf/nodes)
 
 # Turtle TF Broadcaster
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir Turtlebot'un pozisyonunu ve yönelimini TF (Dönüşüm Çerçevesi) mesajlarına dönüştürmek ve bu dönüşüm bilgilerini yayınlamak için kullanılır. Bu dönüşüm bilgileri, Turtlebot'un pozisyonunu ve yönelimini "world" çerçevesi içinde ifade eder.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - rospy
@@ -84,7 +84,7 @@ Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -95,19 +95,20 @@ Her yeni pozisyon verisi geldiğinde, bu verileri TF mesajlarına dönüştürü
 
 Dönüşüm bilgilerini /tf konusuna yayınlar.
 
-Parametreler
-turtlename: Turtlebot'un adını belirler. Bu ad, parametre olarak alınabilir veya betik içinde doğrudan ayarlanabilir.
-Notlar
+### Parametreler
+turtlename: Turtlebot'un adını belirler. Bu ad, parametre olarak alınabilir veya betik içinde doğrudan ayarlanabilir. 
+
+### Notlar
 Betik, /turtle1/pose konusundan gelen pozisyon verilerini dinler ve bu verileri TF dönüşüm bilgilerine çevirir.
 TF dönüşümü, Turtlebot'un (x, y) pozisyonunu ve yönelimini ("world" çerçevesi içinde) ifade eder.
 
-### 3. [Draw circle](src/my_ros_examples/scripts)
+## 3. [Draw circle](src/my_ros_examples/scripts)
 
 # Turtlebot ile Daire Çizme
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir Turtlebot'un yardımıyla bir daire çizmeye yönelik bir örnek içerir. Betik, Turtlebot'a `Twist` mesajları göndererek ileri yönde hareket etmesini ve dönmeyi sağlar, bu nedenle bir daire çizilir.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
@@ -115,7 +116,7 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -124,17 +125,17 @@ Betik başladığında, Turtlebot ileri yönde hareket edip dönmeye başlayacak
 
 Daire çiziminin sürekli devam etmesi için betik döngü içinde döner ve Twist mesajları yayınlar.
 
-Notlar
+### Notlar
 Bu betik, Turtlebot'a dönmeyi ve ileri yönde hareket etmeyi sağlamak için Twist mesajları kullanır.
 Dairenin çizim hızını ayarlamak için rate değişkenini düzenleyebilirsiniz.
 
-### 4. [Cmd vel Publisher](src/my_ros_examples/scripts)
+## 4. [Cmd vel Publisher](src/my_ros_examples/scripts)
 
 # cmd_vel Yayıncısı
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir robotun hareket komutlarını yayınlamanıza yardımcı olur. Betik, `/cmd_vel` konusuna `Twist` mesajları gönderir, böylece robot belirli bir hızda ileri yönde hareket eder.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - rospy
@@ -142,7 +143,7 @@ Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -151,21 +152,21 @@ Betik başladığında, /cmd_vel konusuna Twist mesajları göndererek robotu il
 
 Betik döngü içinde döner ve komutları belirli bir hızda yayınlamaya devam eder.
 
-Parametreler
+### Parametreler
 Betik içinde aşağıdaki parametreleri düzenleyebilirsiniz:
 
 cmd.linear.x: Robotun ileri yönde hareket etme hızını ayarlar. Örneğin, cmd.linear.x = 0.2 ile robot 0.2 m/s hızında ileri yönde hareket eder.
 cmd.angular.z: Robotun dönme hızını ayarlar. Örneğin, cmd.angular.z = 0.0 ile robot dönmez.
-Notlar
+### Notlar
 Bu betik, /cmd_vel konusuna Twist mesajları göndererek robotun hareketini kontrol eder.
 
-### 5. [Turtlebot Pose Publisher](src/my_ros_examples/scripts)
+## 5. [Turtlebot Pose Publisher](src/my_ros_examples/scripts)
 
 # Turtlebot Pozisyon Abonesi
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir Turtlebot'un pozisyonunu izlemek ve bu pozisyon verilerini almak için kullanılır. Betik, `/turtle1/pose` konusundan gelen `Pose` mesajlarını dinler ve bu mesajları ekrana basar.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - rospy
@@ -173,7 +174,7 @@ Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -182,23 +183,23 @@ Betik başladığında, /turtle1/pose konusundan gelen Pose mesajlarını dinlem
 
 Her mesajı ekrana basar, bu nedenle Turtlebot'un anlık pozisyon verilerini görebilirsiniz.
 
-Parametreler
+### Parametreler
 Betik içinde yorum satırı olarak verilen kod parçası, pose_callback fonksiyonunu düzenler ve Pose mesajının içindeki x ve y değerlerini bir pozisyon koordinatı olarak ekrana basar. Bu değişiklik ile x ve y değerlerini daha anlamlı bir şekilde görebilirsiniz.
 
-Notlar
+### Notlar
 Bu betik, /turtle1/pose konusundan gelen Pose mesajlarını dinleyerek Turtlebot'un anlık pozisyon verilerini görüntüler.
 
-### 6. [My first Publisher](src/my_ros_examples/scripts)
+## 6. [My first Publisher](src/my_ros_examples/scripts)
 
-Proje açıklaması: Proje 6 ile ilgili kısa bir açıklama burada bulunur.
+Basit bir publisher örneğidir.
 
-### 7. [Turtle Controller](src/my_ros_examples/scripts)
+## 7. [Turtle Controller](src/my_ros_examples/scripts)
 
 # Turtlebot Hareket ve Çizim Kontrolü
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir Turtlebot'u hem hareket ettirmek hem de çizim yapmak için kullanılır. Betik, `/turtle1/pose` konusundan gelen pozisyon verilerini izler ve buna göre Turtlebot'u belirli bir koordinat aralığında hareket ettirir. Ayrıca, çizgi rengini değiştirmek için `/turtle1/set_pen` hizmetini çağırır.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 - rospy
@@ -208,7 +209,7 @@ Bu betik, aşağıdaki ROS paketlerine ve mesajlara bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -219,7 +220,7 @@ Turtlebot'un hareketini kontrol etmek için Twist mesajları gönderir ve /turtl
 
 Turtlebot'un çizdiği çizginin rengini değiştirmek için /turtle1/set_pen hizmetini çağırır.
 
-## Notlar
+### Notlar
 Betik, Turtlebot'un pozisyonunu izler ve belirli bir koordinat aralığında ise ileri yönde hareket ettirir, aksi takdirde döndürür.
 Çizilen çizginin rengi, call_set_pen_service fonksiyonu aracılığıyla değiştirilir.
 Parametreler
@@ -227,38 +228,38 @@ pose.x, pose.y: Turtlebot'un X ve Y koordinatları, belirli bir koordinat aralı
 cmd.linear.x, cmd.angular.z: Turtlebot'un ileri yönde ve dönme hızları, hareket komutlarını oluşturmak için kullanılır.
 call_set_pen_service: Çizilen çizginin rengini ve kalınlığını ayarlamak için kullanılan hizmeti çağırır.
 
-### 8. [Concatenate Strings Service Examples](my_string_concat_service/)
+## 8. [Concatenate Strings Service Examples](src/my_string_concat_service/src)
 
 ## String Birleştirme İstemci
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir hizmeti çağırarak iki metin dizesini birleştirir. İşte nasıl kullanılacağına dair ayrıntılar:
 
-## Bağımlılıklar
+### Bağımlılıklar
 Bu betik, aşağıdaki ROS paketlerine ve hizmet mesajlarına bağımlıdır:
 rospy
 my_string_concat_service.srv.ConcatenateStrings
 Bu paketlerin ve hizmet mesajlarının kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 Betiği çalıştırın:
 ./concatenate_strings_client.py
 Betik, belirtilen iki metin dizesini birleştirmek için ilgili hizmeti çağırır.
 
 Birleştirilmiş metin dizesi sonucunu ekranda görüntüler.
 
-# Örnek Kullanım
+### Örnek Kullanım
 Örneğin, "Hello, " ve "world!" metinlerini birleştirmek için aşağıdaki gibi kullanabilirsiniz:
 
 ./concatenate_strings_client.py
 Sonuç, "Hello, world!" olacaktır.
 
-## Notlar
+### Notlar
 Bu betik, hizmeti çağırmak için rospy.ServiceProxy kullanır.
 Eğer hizmet çağrısı başarısız olursa, bir hata mesajı görüntülenir.
 
 ## String Birleştirme Sunucusu
 Bu Python betiği, ROS (Robot Operating System) kullanarak iki metin dizesini birleştiren bir hizmet sunucusu oluşturur. İstemcilerden gelen taleplere yanıt verir. İşte nasıl kullanılacağına dair ayrıntılar:
 
-## Bağımlılıklar
+### Bağımlılıklar
 Bu betik, aşağıdaki ROS paketlerine ve hizmet mesajlarına bağımlıdır:
 
 rospy
@@ -266,25 +267,25 @@ my_string_concat_service.srv.ConcatenateStrings
 my_string_concat_service.srv.ConcatenateStringsResponse
 Bu paketlerin ve hizmet mesajlarının kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 Betiği çalıştırın:
 ./concatenate_strings_server.py
 Betik, "concatenate_strings" adında bir hizmet sunar ve istemcilerden gelen taleplere yanıt verir.
 
 İstemcilerden gelen talepleri birleştirir ve yanıt olarak birleştirilmiş metin dizesini gönderir.
 
-## Notlar
+### Notlar
 Bu betik, rospy.Service kullanarak hizmet sunar ve talepleri işler.
 Hizmet sunucusu, iki metin dizesini birleştirir ve sonucu geri döndürür.
 Sunucu, "Ready to concatenate strings." mesajıyla başlayarak hazır durumda bekler.
 
-### 9. [Odom Publisher](my_turtlebot3_pkg/)
+## 9. [Odom Publisher](src/my_turtlebot3_pkg/scripts)
 
 # Odometri Verilerini Abone Etme
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir robotun odometri verilerini almanıza yardımcı olur. Odometri verileri, robotun konumunu ve hareketini izlemek için kullanışlıdır.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
@@ -292,7 +293,7 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -301,16 +302,16 @@ Program başladığında, odom konusunu dinleyerek robotun odometri verilerini a
 
 Odometri verileri, odom_callback fonksiyonu aracılığıyla alınır ve rospy.loginfo kullanılarak günlüğe (log) yazılır.
 
-## Notlar
+### Notlar
 Bu betik, odom konusuna abone olarak odometri verilerini alır. Odometri verileri, robotun konumunu ve hareketini izlemek için kullanışlıdır.
 
-### 10. [Robot Konumunu Alma (yeni topic örneği)](new_topic_example/)
+## 10. [Robot Konumunu Alma (yeni topic örneği)](src/new_topic_example)
 
 # Robot Konumunu Alma
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir robotun konumunu almanıza yardımcı olur. Betik, TF (Transform) konseptini kullanarak bir kaynaktan hedef bir çerçeve içindeki robotun konumunu alır.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
@@ -318,7 +319,7 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -331,21 +332,21 @@ target_frame: Hedef robotun çerçeve adı.
 source_frame: Dünya koordinat sistemi çerçevesi.
 Betik, TF'den veri alırken olası hataları ele alır ve günlüğe (log) yazar.
 
-## Parametreler
+### Parametreler
 Betik içinde aşağıdaki değişkenleri düzenleyebilirsiniz:
 
 rate: Döngü hızı, TF'den konum verilerini ne sıklıkta alacağınızı belirler.
 
-## Notlar
+### Notlar
 Bu betik, TF konseptini kullanarak robotun konumunu alır. Robotun doğru frame'leri ve TF konfigürasyonu ayarlaması gereklidir.
 Betik, rospy.loginfo ve rospy.logwarn kullanarak günlüğe (log) mesajlar yazar.
 
 
-### 11. [Multi Turtle Controller](turtlesim_example/)
+## 11. [Multi Turtle Controller](src/turtlesim_example)
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak birden fazla Turtlebot'u kontrol etmek için kullanılır. Bu betik, her bir Turtlebot'un hızını ayarlamak için kullanılır.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 - rospy
@@ -353,7 +354,7 @@ Bu betik, aşağıdaki ROS paketlerine bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -363,18 +364,18 @@ move_turtle("turtle1", 1.0, 0.0)  # İlk Turtlebot ileri yönde hareket eder.
 move_turtle("turtle2", -1.0, 0.0)  # İkinci Turtlebot geri yönde hareket eder.
 Betik, her Turtlebot için ayrı bir kontrol düğümü başlatır ve belirtilen hızlara göre hareket eder.
 
-## Parametreler
+### Parametreler
 Betiği özelleştirmek için aşağıdaki parametreleri kullanabilirsiniz:
 
 move_turtle fonksiyonu içinde Turtlebot adını, lineer hızı ve açısal hızı belirleyebilirsiniz.
 
-### 12. [Draw square, circle, triangle](turtlesim_example/)
+## 12. [Draw square, circle, triangle](turtlesim_example/)
 
 # Turtle Shape Drawer
 
 Bu Python betiği, ROS (Robot Operating System) kullanarak bir Turtlebot ile farklı şekiller çizmenizi sağlar. Kare, yuvarlak ve üçgen gibi temel şekilleri çizebilirsiniz.
 
-## Bağımlılıklar
+### Bağımlılıklar
 
 Bu betik, aşağıdaki ROS paketlerine ve Python modüllerine bağımlıdır:
 - rospy
@@ -384,7 +385,7 @@ Bu betik, aşağıdaki ROS paketlerine ve Python modüllerine bağımlıdır:
 
 Bu paketlerin kurulu olduğundan ve ROS çevresinin etkin olduğundan emin olun.
 
-## Kullanım
+### Kullanım
 
 1. Betiği çalıştırın:
    ```bash
@@ -397,7 +398,7 @@ Program çalıştığında, aşağıdaki seçenekleri görürsünüz:
 -Çıkış
 Çizmek istediğiniz şekli seçin, ardından Turtlebot o şekli çizecektir. Çizim tamamlandığında veya çıkış seçeneğini seçtiğinizde program sona erer.
 
-## Parametreler
+### Parametreler
 Betiği özelleştirmek veya farklı şekiller çizmek için kod içindeki şu yöntemleri kullanabilirsiniz:
 
 draw_square: Kare çizer.
@@ -405,7 +406,7 @@ draw_circle: Yuvarlak çizer.
 draw_triangle: Üçgen çizer.
 Çizim hızını ve şekillerin boyutlarını ayarlamak için bu yöntemleri düzenleyebilirsiniz.
 
-## Notlar
+### Notlar
 Çizimler, /turtle1/cmd_vel konusuna hareket komutları göndererek gerçekleştirilir.
 Çizimlerin düzgün çalışabilmesi için Turtlebot'un turtlesim simülasyonu etkin olmalıdır.
 
@@ -417,3 +418,4 @@ Projelerle ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen benimle ile
 **Adınız Soyadınız**
 - E-posta: [gulislamogluu@hotmail.com](mailto:gulislamogluu@hotmail.com)
 - GitHub: [github.com/gulslamoglu](https://github.com/gulslamoglu)
+- Notlarım: [notion.com/gyuli](https://successful-helicopter-0c1.notion.site/56f9a251c4c74a8c9e70aaa24756c502?v=91a4cdc4e48349728553ea7c069c9fff&pvs=4)
